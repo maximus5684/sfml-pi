@@ -594,7 +594,7 @@ void InputImpl::setMousePosition(const Vector2i& position, const Window& relativ
 
 
 ////////////////////////////////////////////////////////////
-bool InputImpl::isTouchDown(unsigned int /*finger*/)
+bool InputImpl::isTouchDown(unsigned int finger)
 {
     for ( std::vector<TouchSlot>::iterator slot = touchSlots.begin(); slot != touchSlots.end(); ++slot )
     {
@@ -607,7 +607,7 @@ bool InputImpl::isTouchDown(unsigned int /*finger*/)
 
 
 ////////////////////////////////////////////////////////////
-Vector2i InputImpl::getTouchPosition(unsigned int /*finger*/)
+Vector2i InputImpl::getTouchPosition(unsigned int finger)
 {
     for ( std::vector,TouchSlot>::iterator slot = touchSlots.begin(); slot != touchSlots.end(); ++slot )
     {
@@ -620,7 +620,7 @@ Vector2i InputImpl::getTouchPosition(unsigned int /*finger*/)
 
 
 ////////////////////////////////////////////////////////////
-Vector2i InputImpl::getTouchPosition(unsigned int /*finger*/, const Window& /*relativeTo*/)
+Vector2i InputImpl::getTouchPosition(unsigned int finger, const Window& /*relativeTo*/)
 {
     return getTouchPosition( finger );
 }
