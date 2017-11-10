@@ -74,7 +74,7 @@ namespace
     std::vector<bool> keyMap(sf::Keyboard::KeyCount, false);   // track whether mouse buttons are down
 
     int touchFd = -1;                                          // file descriptor we have seen MT events on; assumes only 1
-    std::vector<TouchSlot touchSlots;                          // track the state of each touch "slot"
+    std::vector<TouchSlot> touchSlots;                         // track the state of each touch "slot"
     int currentSlot = 0;                                       // which slot are we currently updating?
 
     std::queue<sf::Event> eventQueue;                          // events received and waiting to be consumed
