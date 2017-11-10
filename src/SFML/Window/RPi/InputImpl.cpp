@@ -272,7 +272,7 @@ namespace
 
     void processSlots()
     {
-        for ( std::vector<TouchSlot::iterator slot = touchSlots.begin(); slot != touchSlots.end(); ++slot )
+        for ( std::vector<TouchSlot>::iterator slot = touchSlots.begin(); slot != touchSlots.end(); ++slot )
         {
             sf::Event ev;
 
@@ -609,7 +609,7 @@ bool InputImpl::isTouchDown(unsigned int finger)
 ////////////////////////////////////////////////////////////
 Vector2i InputImpl::getTouchPosition(unsigned int finger)
 {
-    for ( std::vector,TouchSlot>::iterator slot = touchSlots.begin(); slot != touchSlots.end(); ++slot )
+    for ( std::vector<TouchSlot>::iterator slot = touchSlots.begin(); slot != touchSlots.end(); ++slot )
     {
         if ( slot->id == finger )
             return slot->pos;
